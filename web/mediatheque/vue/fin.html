@@ -1,0 +1,71 @@
+</main>
+
+<footer>
+
+
+    <div class="footer-left">
+        <div class="bloc-univ">
+            <a href="index.php?controleur=controleurAcceuil"><img src="css/Ressources/logo_univ_vide.png" alt="" width="230px"></a>
+            <a href="index.php?controleur=controleurAcceuil"><p>Médiathèque</p></a>
+        </div>
+    </div>
+
+    <div class="footer-center">
+        <div>
+            <i class="fa fa-map-marker"></i>
+            <a href="https://map.google.com/?q=48.712460, 2.170809" target="_blank" rel="noopener noreferrer"><span>Avenue des Sciences, Plateau de Moulon</span> 91190, Gif-sur-Yvette</a>
+        </div>
+        <div>
+            <i class="fa fa-phone"></i>
+            <a href="tel:+33646173947">+33 6 23 45 67 89</a>
+        </div>
+        <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:learning.moulon@gmail.com">learning.moulon@universite-paris-saclay.fr</a></p>
+        </div>
+    </div>
+
+    <div class="footer-right">
+        <p class="a-propos">
+            <span>À Propos de la médiathèque</span>
+            Venez découvir un vaste panel d'oeuvres qui vous aideront dans votre travail ou vous détendront durant votre temps libres !
+        </p>
+        <div class="footer-icons">
+            <a href="https://www.instagram.com/learning_moulon/" target="_blank" rel="noopener noreferrer"><img src="css/Ressources/insta.png" alt="" width="35px"></a>
+            <a href="https://twitter.com/LearningMoulon" target="_blank" rel="noopener noreferrer"><img src="css/Ressources/twitter.png" alt="" width="35px"></a>
+            <a href="https://www.facebook.com/profile.php?id=100088862005374" target="_blank" rel="noopener noreferrer"><img src="css/Ressources/facebook.png" alt="" width="35px"></a>
+        </div>
+
+        <p class="copyright">
+            Learning Center Moulon 
+            <button class="secret" onclick="window.location.href='vue/flower.html';">©</button> 
+            2022
+        </p>
+    </div>
+
+</footer>
+</body>
+
+<script>
+    var openModalButton = document.getElementById("open-modal-button");
+    var modal = document.getElementById("modal");
+    var closeButton = document.getElementsByClassName("close-button")[0];
+
+    openModalButton.addEventListener("click", function() {
+        modal.style.display = "block";
+    });
+
+    closeButton.addEventListener("click", function() {
+        modal.style.display = "none";
+    });
+</script>
+
+<script>
+    const menuHamburger = document.querySelector(".icon")
+const navLinks = document.querySelector(".hide")
+menuHamburger.addEventListener('click',()=>{
+navLinks.classList.toggle('responsive-nav')
+})
+</script>
+
+</html>

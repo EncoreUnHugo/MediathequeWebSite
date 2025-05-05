@@ -1,0 +1,250 @@
+.biblio{
+    height: 350px;
+    overflow: hidden;
+    background: url(Ressources/biblio.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.biblio .transparent{
+    background-color: rgba(53, 54, 99, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.enTete{
+    position: absolute;
+    top: 280px;
+    margin-left: 50%;
+    left: -30%;
+    width: 60%;
+}
+
+.enTete > *{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    width: 33%;
+    vertical-align: bottom;
+    color: white;
+}
+
+.same{
+    padding: 15px 0;
+    font-size: 1.5em;
+    background-color: #63003C;
+}
+
+.title{
+    background-color: #313E48;
+    padding: 25px 0;
+    font-size: 1.8em;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+.enTete .same{
+    transition: 0.15s all ease;
+}
+
+.enTete a:hover .same{
+    background-color: #3c0024;
+    transition: 0.15s all ease;
+}
+
+.containInfo{
+    background-color: #D6DBDF;
+    width: 70%;
+    height: 630px;
+    margin: 70px auto 50px auto;
+}
+
+.containInfo > h3{
+    position: relative;
+    width: 100%;
+    border-bottom: solid 4px #858585;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 50px;
+}
+
+.group{
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.group > .info{
+    position: relative;
+    display: inline-block;
+    width: 35%;
+    padding: 10px;
+    margin-left: 25px;
+    margin-right: 25px;
+    text-align: left;
+    background-color: #9b9b9b;
+}
+
+.containInfo .group p, .containInfo .supp p{
+    position: relative;
+    top: -5px;
+    font-style: italic;
+    color: #535353;
+    font-size: 0.85em;
+}
+
+#blank{
+    background-color: transparent;
+}
+
+.containInfo .supp{
+    position: relative;
+    bottom: -20px;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.containInfo .supp > button{
+    color: white;
+    width: 250px;
+    background-color: #63003C;
+    border-radius: 40px;
+    padding: 15px 45px;
+    transition: 0.15s all ease;
+    cursor: pointer;
+}
+
+.containInfo .supp > button:hover{
+    background-color: #3c0024;
+    transition: 0.15s all ease;
+}
+
+.containInfo .supp > p{
+    top: 30px;
+}
+
+.supprimer{
+    background-color: lightgrey;
+    text-align: center;
+    margin-top: 183px;
+    margin-bottom: 130px;
+    padding: 20px;
+}
+
+@media only screen and (max-width : 1040px){
+    .enTete{
+        left: -40%;
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width : 725px) {
+    .enTete{
+        width: 99%;
+        left: -49.5%;
+        top: 315px;
+    }
+
+    .enTete .title{
+        padding: 15px 0;
+    }
+
+    .enTete .same{
+        padding: 7px 0;
+    }
+
+    .enTete *{
+        font-size: 1em;
+    }
+
+    .containInfo{
+        height: 700px;
+    }
+
+    .containInfo > h3{
+        font-size: 1.3em;
+    }
+    
+    .group{
+        margin-bottom: 0;
+    }
+
+    .group > .info{
+        display: block;
+        width: 80%;
+        margin: 0 auto 20px auto;
+        text-align: center;
+        font-size: 0.8em;
+    }
+
+    .containInfo .supp{
+        margin-top: 10px;
+        width: 100%;
+        font-size: 0.8em;
+    }
+
+    .containInfo .supp > p{
+        top: 25px;
+        width: 85%;
+        margin: auto;
+    }
+}
+
+/*---------------------------------- POP UP MODAL ---------------------------------*/
+
+/* Style pour masquer le modal par défaut */
+.modal {
+    display: none; /* masqué par défaut */
+    position: fixed; /* Reste en place */
+    z-index: 1; /* Situé au-dessus de tout le reste */
+    padding-top: 100px; /* espace en haut de la boîte de dialogue */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur de la boîte de dialogue */
+    height: 100%; /* hauteur de la boîte de dialogue */
+    background-color: rgb(0,0,0); /* Fond de boîte de dialogue */
+    background-color: rgba(0,0,0,0.4); /* Fond de boîte de dialogue avec transparence */
+}
+
+/* Style pour le contenu de la boîte de dialogue */
+.modal-content {
+    background-color: #D6DBDF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 320px;
+    margin-top: 100px;
+}
+
+.modal-content button{
+    margin-top: 15px;
+    color: white;
+    background-color: #63003C;
+    border-radius: 40px;
+    padding: 10px 20px;
+    transition: 0.15s all ease;
+    cursor: pointer;
+}
+
+/* Style pour le bouton de fermeture */
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    top: 0;
+}
+
+/* Style pour le bouton de fermeture lorsque la souris passe dessus */
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="hautRecherche">
+        <div class="transparent"></div>
+    </div>
+    <div class="recherche">
+        <div class="trait"></div>
+        <form action="index.php" method="get">
+            <input type="hidden" name="controleur" value="controleur<?php echo $key ?>">
+            <input type="hidden" name="action" value="afficherRecherche">
+            <button type="submit"><img src="css/Ressources/loupe.png" alt="" id="loupe"></button>
+            <input type="text" name="recherche" placeholder="Recherchez un <?php echo $key ?> ou un <?php echo $author ?>">
+        </form>
+    </div>
+</div>

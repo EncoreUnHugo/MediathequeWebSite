@@ -1,0 +1,387 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style:none;
+    text-decoration: none;
+    font-family:'Open Sans';
+    user-select: none;
+}
+
+
+/*---------------------------------- NAV BAR ---------------------------------*/
+
+nav{
+    width: 100%;
+    top:0%;
+    height: 10%;
+    max-height: 70px;
+    min-height: 70px;
+    background-color: #D6DBDF;
+    position: fixed;
+    z-index: 99999;
+}
+
+.gauche{
+    float: left;
+}
+
+#med{
+    color: #313E48;
+    font-size: 1.5em;
+    border-left: #313E48 solid 3px;
+    margin-top: 17px;
+    padding: 3px 15px;
+}
+
+.gauche img{
+    padding: 10px 15px;
+}
+
+.droite{
+    float: right;
+}
+
+nav a{
+    display: block;
+    color: black;
+    font-weight: bold;
+}
+
+.profil a {
+    background-color: #63003C;
+    padding: 6.5px 13px;
+    transition: ease 0.2s;
+}
+
+.profil a:hover{
+    background-color: #3c0024;
+    transition: ease 0.1s;
+}
+
+.hov a{
+    padding: 22.8px 35px;
+    font-size: 1.12em;
+}
+
+.hov{
+    transition: ease 0.1s;
+}
+
+.hov:hover{
+    background-color: #63003C;
+    transition: ease 0.1s;
+}
+
+.hov:hover a{
+    color: white;
+    transition: ease 0.1s;
+}
+
+.sous{
+    border-top: white solid 3px;
+    display: none;
+    background-color: #63003C;
+    z-index: 99999;
+    transition: ease 0.1s;
+}
+
+.sous li{
+    float: none;
+    width: 100%;
+    text-align: left;
+}
+
+.sous a{
+    font-size: 1.1em;
+}
+
+.sous li a:hover{
+    text-decoration: underline #ffffff 2px;
+}
+
+nav > ul li:hover .sous{
+    display: block;
+}
+
+.deroulant{
+    transition: ease 0.1s;
+    z-index: 10;
+}
+
+.deroulant .sous{
+    transition: all 0.2s ease;
+}
+
+.deroulant > a:after{
+    content: "❯";
+    font-size: 15px;
+    margin-left: 7px;
+    display: inline-block;
+    animation: rotationFlecheOut 0.2s linear forwards;
+}
+
+.deroulant:hover a:after {
+    animation: rotationFlecheIn 0.2s linear forwards;
+}
+
+.deroulant:hover .sous{
+    animation: apparitionSousMenu 0.2s forwards;
+}
+
+@keyframes apparitionSousMenu {
+    0% {
+        margin-top: -40px;
+    }
+    100% {
+        margin-top: 0;
+    }
+
+}
+
+@keyframes rotationFlecheIn {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(90deg);
+    }
+}
+
+@keyframes rotationFlecheOut {
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.icon{
+    position: absolute;
+    display: none;
+    font-size: 2em;
+    top: 10px;
+    right: 135px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+/* ------------------------------ FOOTER ------------------------------ */
+
+
+footer{
+	background:#D6DBDF;
+	box-sizing: border-box;
+	width: 100%;
+	font-weight: bold;
+	padding: 55px 50px 55px 100px;
+    color: black;
+}
+
+footer .footer-left,
+footer .footer-center,
+footer .footer-right {
+	display: inline-block;
+	vertical-align: top;
+}
+
+/* Footer left */
+
+footer .footer-left{
+	width: 35%;
+}
+
+footer .footer-left .bloc-univ a{
+    display: block;
+    font-size: 1.8em;
+    color: #313E48;
+}
+
+footer .footer-left .bloc-univ{
+    width: 230px;
+}
+
+footer .footer-left .bloc-univ p{
+    text-align: center;
+}
+
+footer .footer-left .bloc-univ img{
+    padding-bottom: 15px;
+    border-bottom: #313E48 solid 3px;
+}
+
+/* Footer Center */
+
+footer .footer-center{
+	width: 40%;
+}
+
+footer .footer-center i{
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	vertical-align: middle;
+}
+
+footer .footer-center i.fa-envelope{
+	line-height: 38px;
+}
+
+footer .footer-center p{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+footer .footer-center span{
+	display:block;
+	line-height:2;
+}
+
+footer .footer-center a{
+	color: #63003C;
+    text-decoration: none;
+}
+
+footer .footer-links a:before {
+  content: "|";
+  font-size: 1.4em;
+  left: 0;
+  color:#63003C;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+/* Footer Right */
+
+footer .footer-right{
+	width: 20%;
+}
+
+footer .a-propos{
+	font-size: 13px;
+	margin: 0;
+}
+
+footer .a-propos span{
+	display: block;
+	font-size: 1.3em;
+	margin-bottom: 20px;
+}
+
+footer .footer-icons{
+	margin-top: 25px;
+}
+
+footer .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	margin-right: 15px;
+	margin-top: 20px;
+    border-radius: 35px;
+}
+
+footer .footer-icons a:hover{
+    background-color: #63003C;
+}
+
+.copyright{
+    font-size: 0.8em;
+    margin-top: 25px;
+    float: right;
+}
+
+.secret{
+    border: none;
+    background-color: #D6DBDF;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA TABLETTE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+@media screen and (max-width: 1080px) {
+
+    /* ------------------------------ NAV ----------------------------*/
+    
+    header nav .hide{
+        position: absolute;
+        right: -305px;
+        display: none;
+        flex-direction: column;
+        background-color:#D6DBDF;
+        text-align: center;
+        width: 300px;
+        height: 100vh;
+        border-left: #313E48 solid 5px;
+        transition: all 0.3s ease;
+    }
+    
+    header nav .hide .prem{
+        margin-top: 70px;
+    }
+    
+    header nav .icon{
+        display: block;
+        transition: all 0.1s ease;
+    }
+    
+    header nav .icon:hover{
+        color: #63003C;
+        transition: all 0.1s ease;
+    }
+    
+    header nav .profil{
+        width: 78px;
+    }
+    
+    header nav .logo, header nav .logo img{
+        margin-top: 5px;
+        width: 70px;
+    }
+    
+    header nav #med{
+        width: 70px;
+        font-size: 1em;
+        margin-top: 21px;
+        margin-left: 20px;
+        padding: 3px;
+        border-left: #313E48 solid 2px;
+    }
+    
+    header nav .deroulant .sous a{
+        flex-direction: column;
+        text-align: center;
+    }
+   
+    header nav .responsive-nav{
+        display: flex;
+        right: 0;
+        transition: all 0.3s ease;
+    }
+
+    /* ------------------------------ FOOTER ----------------------------*/
+
+    footer{
+        padding: 55px 50px 55px 50px;
+    }
+
+    footer .footer-left .bloc-univ{
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+    footer .footer-left,
+    footer .footer-center,
+    footer .footer-right{
+        display: block;
+        width: 100%;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,31 @@
+<header>
+    <nav class ="nav">
+        <ul>
+            <li class="gauche logo"><a href="index.php"><img src="css/Ressources/logo_univ_vide.png" alt="" width="120px"></a></li> 
+            <li class="gauche"><a href="index.php" id="med">Médiathèque</a></li>
+            <li class="droite profil"><a href="<?php echo (isset($_SESSION['mail'])) ? 'index.php?controleur=controleurEmprunteur' : 'index.php?controleur=controleurConnexion'; ?>"><img src="css/Ressources/logo_profil.png" alt="" width="50px"></a></li>
+        </ul>
+
+        <ul class="hide">
+            <li class="prem droite hov"><a href="<?php echo (isset($_SESSION['mail'])) ? 'index.php?controleur=controleurEmpruntRetour' : 'index.php?controleur=controleurEmpruntRetour&action=afficherEmptRetPasConnecter'; ?>">Emprunt / Retour</a></li>
+
+            <li class="droite hov"><a href="index.php?controleur=controleurHoraire&action=afficherHoraire">Horaires</a></li>
+            <li class="droite hov"><a href="index.php?controleur=controleurTravail&action=afficherTravail">Travail</a></li>
+
+            <li class="deroulant droite hov"><a href="#">Explorer </a>
+                <ul class="sous">
+                    <li><a href="index.php?controleur=controleurLivre&action=lireObjets" id="livre">Livres</a></li>
+                    <li><a href="index.php?controleur=controleurFilm&action=lireObjets" id="film">Films</a></li>
+                    <li><a href="index.php?controleur=controleurAlbum&action=lireObjets" id="album">Albums</a></li>
+                </ul>
+            </li>
+        </ul>
+        <p class="icon">&#9776;</p>
+    </nav>
+</header>
+
+<main>
+
+
+
+

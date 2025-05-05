@@ -1,0 +1,97 @@
+
+    <a href="index.php" class="logo">
+	<img src="css/Ressources/logo_univ_vide.png" width=200px>
+	</a>
+
+    <div class="container">
+        
+        <div class="message">
+            <div class="btn">
+                <button class="button" id="signup">S'inscrire</button>
+                <button class="button" id="login">Connexion</button>
+            </div>
+        </div>
+
+        <div class="form">
+
+            <div class="haut insc">Inscrivez-vous</div>
+            <form autocomplete="off" action="index.php?controleur=controleurConnexion&action=creerEmprunteur" method="post" onsubmit="return validateForm()">
+                <input type="text" id="nom" name="nom" placeholder="Nom">
+                <input type="text" id="prenom" name="prenom" placeholder="Prénom">
+                <input type="email" id ="email" name="mail" placeholder="Email">
+                <input type="tel" name="tel" placeholder="Numéro de téléphone">
+                <select id="categorie" name="numCategorie">
+                    <option value="" disabled selected hidden>Catégorie...</option>
+                    <option value="1">Étudiant</option>
+                    <option value="2">Professeur</option>
+                    <option value="3">Administratif</option>
+                    <option value="4">Extérieur</option>
+                </select>
+                <input type="password" id="mdp1" name="mdp1" placeholder="Mot de passe">
+                <input type="password" id="mdp2" name="mdp2" placeholder="Répétez le mot de passe">
+                <button type="submit" class="button low">S'inscrire</button>
+            </form>
+        </div>
+
+        <div class="form">
+
+            <div class="haut connec">Connectez-vous</div>
+            <form autocomplete="off" action="index.php?controleur=controleurConnexion&action=connecterConnexion" method="post">
+                <input name ="mail" type="text" placeholder="Addresse mail">
+                <input name="mdp" type="password" placeholder="Mot de passe">
+                <button class="button low" type="submit">Connexion</button>
+            </form>
+        </div>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    
+    <script>  
+      
+        $("#signup").click(function() {
+            $(".message").css("transform", "translateX(100%)");
+            if ($(".message").hasClass("login")) {
+                $(".message").removeClass("login");
+            }
+            $(".message").addClass("signup");
+        });
+    
+        $("#login").click(function() {
+            $(".message").css("transform", "translateX(0)");
+            if ($(".message").hasClass("login")) {
+                $(".message").removeClass("signup");
+            }
+            $(".message").addClass("login");
+        });
+
+        function validateForm() {
+            var select = document.getElementById("categorie");
+            var mdp1 = document.getElementById("mdp1").value;
+            var mdp2 = document.getElementById("mdp2").value;
+            if (select.value === "") {
+                alert("Veuillez sélectionner une Categorie");
+                return false;
+            }
+            if (mdp1 !== mdp2) {
+                alert("Les mots de passes sont différent.");
+                return false;
+            }
+            return true;
+        }
+
+        document.getElementById("nom").onkeyup = function() {
+            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+        };
+
+        document.getElementById("prenom").onkeyup = function() {
+            this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1);
+        };
+
+        document.getElementById("email").onkeyup = function() {
+            this.value = this.value.toLowerCase();
+        };
+
+    </script>
+
+</body>
+</html>

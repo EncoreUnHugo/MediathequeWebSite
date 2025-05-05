@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exemplaires</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/inscription.css" />
+    
+  </head>
+  <body>
+    <div class="flex-col page">
+      <div class="flex-row justify-between items-center header">
+        <div class="flex-row items-center space-x-128">
+          <div class="flex-row">
+            <img
+              class="shrink-0 image"
+              src="css/pic/logo_univ_vide 2.png"
+            />
+            <div class="shrink-0 self-start section"></div>
+            <span class="self-start font_1 text_2">Médiathèque</span>
+          </div>
+          
+        </div>
+        <div class="flex-row items-center group">
+          <img
+            class="shrink-0 image_3"
+            src="css/pic/image9.png"
+          />
+          <img
+            class="shrink-0 image_3 image_4"
+            src="css/pic/image3.png"
+          />
+          <span class="text">Tommy</span>
+        </div>
+      </div>
+      <div class="flex-row flex-auto group_2">
+        <img
+          class="shrink-0 self-start image_5"
+          src="css/pic/Rectangle93.png"
+		  style="margin-top: 520px;"
+        />
+        <div class="flex-col shrink-0 self-start group_3 space-y-48">
+          <div class="flex-col items-center space-y-34">
+            <img
+              class="image_3"
+              src="css/pic/image3.png"
+            />
+            <img
+              class="image_3"
+              src="css/pic/image7.png"
+            />
+          </div>
+          <div class="flex-col items-center space-y-35">
+            <img
+              class="image_3"
+              src="css/pic/image6.png"
+            />
+          </div>
+        </div>
+        <div class="flex-col items-start shrink-0 self-start group_4">
+          <span class="font_1 "><a href="index.php?controleur=controleurInscription&action=afficherPage">Inscription</a></span>
+          <span class="font_1 text_3"><a href="index.php?controleur=controleurEmpruntsEnCours&action=afficherPage">Emprunts en cours</a></span>
+          <span class="font_1 text_5"><a href="index.php?controleur=controleurEmprunt&action=afficherPage">Emprunt</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurAlbum&action=afficherPage">Album</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurFilm&action=afficherPage">Film</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurLivre&action=afficherPage">Livre</a></span>
+		  <span class="font_1 text_5">Exemplaires</a></span>
+        </div>
+        <div class="flex-col flex-auto section_2 space-y-56">
+          <div class="flex-col self-center section_3">
+            <span class="self-center text_4">Nouvel Exemplaire</span>
+			
+			
+			<div class="flex-col justify-start items-start text-wrapper_2"style="border:none;">
+			  <form action="index.php?controleur=controleurHandler&action=handle" method="post">
+				  <label class="font_2 text_9" style="margin-top: 20px;width: 80%;" for="typeSelect">Type d'exemplaire:</label>
+				  <select id="typeSelect" name = "type" class="font_2 text_9" style="margin-top: 20px;width: 20%;">
+					<option  value="Album">Album</option>
+					<option  value="Film">Film</option>
+					<option  value="Livre">Livre</option>
+				
+
+				  </select>
+				  <button class="btn btn-primary" type="submit">valider</button>
+				  </form>
+				</div>
+				
+				
+			  <form action="index.php?controleur=controleurExemplaires&action=enregist" method="post">
+			  
+            <div class="flex-col group_5 space-y-10">
+			  <input class="self-start font_3 text_6" type="text" name = "numExemplaire" value="NumExemplaire" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+            <div class="flex-col group_6 space-y-8">
+              
+			  <input class="self-start font_3 text_8" type="text" name = "langue" value="Langue" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+            <div class="flex-col group_7 space-y-8">
+              
+			  <input class="self-start font_3 text_9" type="text" name = "empruntable" value="Empruntable" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+            <div class="flex-col group_8 space-y-6">
+              
+			  <input class="self-start font_3 text_10" type="text" name = "existant" value="Existant" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+			
+			 <div class="flex-col group_9 space-y-6">
+			  <input class="self-start font_3 text_16" type="text" name = "fonctionnel" value="Fonctionnel" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+			<div class="flex-col group_9 space-y-6">
+			  <input class="self-start font_3 text_16" type="text" name = "support" value="Support" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+			<div class="flex-col group_9 space-y-6">
+			  <input class="self-start font_3 text_16" type="text" name = "numAlbum" value="numAlbum" style="margin-top: -3px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+			<div class="flex-col group_9 space-y-6">
+			<label for="dateAjout" class=" font_3 text_16" style="margin-left: 230px ">Date de Ajout</label>
+			  <input class="self-start font_3 text_16" type="date" name = "dateAjout" value="DateAjout" style="margin-top: 20px;width: 230px;">
+              <div class="self-center section_4"></div>
+            </div>
+			
+				
+			<div>
+              <input class="text_19 flex-col justify-start items-center self-center button " type = "submit" value = "Enregistrer" style="margin-left: 230px;margin-top: 10px;">
+            </div>
+			</form>
+			
+			
+
+			
+			
+          </div>
+		  
+          
+		  
+		  
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

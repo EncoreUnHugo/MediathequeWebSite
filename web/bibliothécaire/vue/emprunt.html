@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emprunt</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/emprunt.css" />
+    
+  </head>
+  <body>
+    <div class="flex-col page">
+      <div class="flex-row justify-between items-center header">
+        <div class="flex-row items-center space-x-124">
+          <div class="flex-row">
+            <img
+              class="shrink-0 image"
+              src="css/pic/logo_univ_vide 2.png"
+            />
+            <div class="shrink-0 self-start section"></div>
+            <span class="self-start font_1 text_2">Médiathèque</span>
+          </div>
+
+        </div>
+        <div class="flex-row items-center group space-x-25">
+          <img
+            class="shrink-0 image_3"
+            src="css/pic/image9.png"
+          />
+          <img
+            class="shrink-0 image_3"
+            src="css/pic/image3.png"
+          />
+          <span class="text">Tommy</span>
+        </div>
+      </div>
+      <div class="flex-row flex-auto group_2">
+        <img
+          class="shrink-0 self-start image_4"
+          src="css/pic/Rectangle93.png"
+        />
+        <div class="flex-col items-center shrink-0 self-start group_3 space-y-34">
+          <img
+            class="image_3"
+            src="css/pic/image3.png"
+          />
+          <img
+            class="image_3"
+            src="css/pic/image7.png"
+          />
+          <img
+            class="image_3"
+            src="css/pic/image6.png"
+          />
+        </div>
+        <div class="flex-col items-start shrink-0 self-start group_4">
+          <span class="font_1"><a href="index.php?controleur=controleurInscription&action=afficherPage">Inscription</a></span>
+          <span class="font_1 text_3"><a href="index.php?controleur=controleurEmpruntsEnCours&action=afficherPage">Emprunts en cours</a></span>
+          <span class="font_1 text_5">Emprunt</span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurAlbum&action=afficherPage">Album</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurFilm&action=afficherPage">Film</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurLivre&action=afficherPage">Livre</a></span>
+		  <span class="font_1 text_5"><a href="index.php?controleur=controleurExemplaires&action=afficherPage">Exemplaires</a></span>
+
+		  </div>
+        <div class="flex-col justify-start items-center flex-auto section_2">
+          <div class="flex-col section_3">
+            <span class="self-center text_4">Enregistrer un Emprunt</span>
+            <div class="flex-col group_5">
+			
+			
+			
+			<form action="index.php?controleur=controleurEmprunt&action=enregistrerEmprunt" method="post">
+			
+			
+				
+              <div class="flex-col justify-start items-start text-wrapper">
+				<input class="font_2 text_6 text_7" type="text" name="mail" placeholder="Mail" >
+              </div>
+			  
+			  <div class="flex-col justify-start items-start text-wrapper_2"style="border:none;">
+				  <label class="font_2 text_9" style="margin-top: -3px;width: 80%;" for="typeSelect">Type d'exemplaire:</label>
+				  <select id="typeSelect" name = "type" class="font_2 text_9" style="margin-top: -3px;width: 80%;">
+					<option  value="Album">Album</option>
+					<option  value="Film">Film</option>
+					<option  value="Livre">Livre</option>
+				  </select>
+				</div>
+
+			  
+              <div class="flex-col justify-start items-start text-wrapper_2">
+               
+				<input class="font_2 text_9" type="text" name="numExemplaire" placeholder="Numéro d’exemplaire" style="margin-top: -3px;width: 80%;">
+              </div>
+            <div>
+              <input class="text_12 flex-col justify-start items-center self-center button " type = "submit" value = "Enregistrer" style="vertical-align: top">
+            </div>
+			</form>
+			
+			
+			
+			
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,368 @@
+
+/*---------------------------------- BODY / Accueil -----------------------------*/
+
+.container{
+    width: 100%;
+    margin: auto;
+}
+
+.recherche{
+    position: relative;
+    background-color: #63003C;
+    width: 55%;
+    padding: 30px 30px 0 50px;
+    float: right;
+    top: -85px;
+    max-height: 105px;
+}
+
+.recherche button{
+    position: relative;
+    top: -10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    height: 68px;
+    transition: 0.15s all ease;
+}
+
+.recherche button:hover{
+    background-color: #3c0024;
+    cursor: pointer;
+    transition: 0.15s all ease;
+}
+
+.recherche #loupe{
+    padding: 10px 25px;
+    border: white solid 3px;
+    width: 45px;
+}
+
+.recherche .trait{
+    position: relative;
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    top: 61px;
+}
+
+.recherche input{
+    position: relative;
+    border: none;
+    width: 67%;
+    top: -23px;
+    left: 15px;
+    height: 40px;
+    font-size: 1.5em;
+    background: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.253);
+}
+
+.container2{
+    width: 100%;
+    margin-top: 200px;
+    margin-bottom: -120px;
+}
+
+.bienvenu{
+    background-color: #313E48;
+    width: 40%;
+    height: 370px;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    z-index: 2;
+}
+
+.bienvenu p{
+    position: relative;
+    top : 30%;
+    bottom: 20%;
+    left: 100px;
+    margin-right: 50px;
+    width: 70%;
+}
+
+@media screen and (max-width: 1400px) {
+    .bienvenu{
+        height: 400px;
+    }
+
+    .bienvenu p{
+        width: 350px;
+        left: 50px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .bienvenu{
+        height: 430px;
+    }
+
+    .bienvenu p{
+        width: 300px;
+        left: 50px;
+    }
+}
+
+.gris{
+    color: #B1B1B1;
+}
+
+.nouveauté a div{
+    position: absolute;
+    width: 100%;
+    height: 88%;
+    overflow: hidden;
+    background-color: #313e48;
+}
+
+.nouveauté{
+    width: 40%;
+    min-width: 550px;
+    height: 350px;
+    position: relative;
+    margin-left: 35%;
+    top: -290px;
+    overflow: hidden;
+    background-color: #313E48;
+}
+
+.nouveauté img{
+    top: -20px;
+    width: 100%;
+    opacity: 0.4;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+}
+
+.nouveauté > a:hover img{
+    transform:scale(1.2);
+}
+
+.nouveauté > a:hover p{
+    top: -200px;
+    font-size: 2.4em;
+}
+
+.nouveauté p{
+    position: relative;
+    top: -190px;
+    font-size: 1.9em;
+    font-weight: bold;
+    color: white;
+    margin: auto;
+    width: fit-content;
+    transition: all 0.2s;
+}
+
+.ombre{
+    position: absolute;
+    height : 0;
+    width : 0;
+    border-bottom : 60px solid #6b6f72;
+    border-left :90px solid transparent;
+}
+
+.blank{
+    position: absolute;
+    width : 0;
+    border-bottom : 60px solid transparent;
+    border-left : 90px solid white;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA TABLETTE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+@media screen and (max-width: 1080px) {
+
+
+/* -------------------------------- MAIN -----------------------------*/
+
+    .container > img{
+        margin-top: 50px;
+    }
+
+    ::-webkit-input-placeholder {
+        font-style: italic;
+        color: rgba(255, 255, 255, 0.253);
+    }
+
+    .recherche{
+        height: 70px;
+    }
+
+    .recherche button{
+        height: 43px;
+    }
+
+    .recherche #loupe{
+        width: 30px;
+        border: white solid 1px;
+        padding: 6px 12px;
+    }
+
+    .recherche .trait{
+        height: 1px;
+        top: 33.8px;
+    }
+
+    .recherche input{
+        top: -18px;
+        font-size: 0.7em;
+    }
+
+    .container2{
+        margin-top: 100px;
+        margin-bottom: 120px;
+    }
+
+    .container2 .bienvenu{
+        margin: auto;
+        width: 75%;
+        height: auto;
+        padding: 5%;
+    }
+
+    .container2 .bienvenu br{
+        display: none;
+    }
+
+    .container2 .bienvenu p{
+        text-align: center;
+        padding: 0px;
+        width: 100%;
+        left: 0;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    .container2 .nouveauté{
+        top: 50px;
+        margin: auto;
+        min-width: 20px;
+        height: 100px;
+        background-color: #63003C;
+        border-radius: 100px;
+        width: 350px;
+        margin-top: 30px;
+    }
+
+    .container2 .nouveauté:hover{
+        background-color:  #3c0024;
+        transition: 0.15s all ease;
+    }
+
+    .container2 .nouveauté img{
+        display: none;
+    }
+
+    .container2 .nouveauté p{
+        top: 30px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+
+    .container2 .nouveauté:hover p{
+        font-size: 2em;
+        top: 27px;
+    }
+
+    .container2 .ombre, .blank{
+        display: none;
+    }
+
+/* ---------------------------------- FOOTER -----------------------------*/
+
+	footer{
+        margin-top: 150px;
+        padding: 55px 50px 55px 50px;
+	}
+
+    footer .footer-left .bloc-univ{
+        margin: auto;
+        margin-bottom: 25px;
+    }
+
+	footer .footer-left,
+	footer .footer-center,
+	footer .footer-right{
+		display: block;
+		width: 100%;
+		margin-bottom: 40px;
+		text-align: center;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- MEDIA MOBILE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+@media screen and (max-width: 600px) {
+    .container .recherche{
+        height: 30px;
+        top: -40px;
+        float: none;
+        padding-left: 30px;
+        margin: auto;
+        margin-bottom: -100px;
+    }
+
+    .container #loupe{
+        display: none;
+    }
+
+    .container .recherche .trait{
+        top: 15px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .container .recherche input{
+        top: -63px;
+        left: 0;
+        width: 100%;
+    }
+
+    .container2{
+        margin-top: 150px;
+    }
+
+    .bienvenu{
+        font-size: 0.8em;
+    }
+
+    .container2 .nouveauté{
+        top: 50px;
+        margin: auto;
+        min-width: 20px;
+        height: 60px;
+        background-color: #63003C;
+        border-radius: 50px;
+        width: 250px;
+        margin-top: 30px;
+        transition: 0.15s all ease;
+    }
+
+    .container2 .nouveauté p{
+        top: 0;
+        padding-top: 16px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1.3em;
+    }
+    
+    .container2 .nouveauté:hover p{
+        font-size: 1.5em;
+        padding-top: 14px;
+    }
+}

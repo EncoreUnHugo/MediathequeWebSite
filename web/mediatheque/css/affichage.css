@@ -1,0 +1,544 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- PAGE DE RECHERCHE -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.container{
+    margin-bottom: 150px;
+}
+
+.haut{
+    position: relative;
+    background-color: white;
+    display: block;
+    margin: auto;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    top: -90px;
+}
+
+.haut:hover{
+    background-color: #63003C;
+}
+
+.hautRecherche{
+    height: 600px;
+    overflow: hidden;
+    background: url(Ressources/biblio.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hautRecherche .transparent{
+    position: relative;
+    background-color: rgba(53, 54, 99, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.recherche{
+    position: relative;
+    background-color: #63003C;
+    width: 55%;
+    padding: 30px 30px 0 50px;
+    float: right;
+    top: -330px;
+    max-height: 105px;
+    z-index: 3;
+}
+
+.recherche button{
+    position: relative;
+    top: -10px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    height: 68px;
+    transition: 0.15s all ease;
+}
+
+.recherche button:hover{
+    background-color: #3c0024;
+    cursor: pointer;
+    transition: 0.15s all ease;
+}
+
+.recherche #loupe{
+    padding: 10px 25px;
+    border: white solid 3px;
+    width: 45px;
+}
+
+.recherche .trait{
+    position: relative;
+    width: 80%;
+    height: 3px;
+    background-color: white;
+    top: 61px;
+}
+
+.recherche input{
+    position: relative;
+    border: none;
+    width: 67%;
+    top: -23px;
+    left: 15px;
+    height: 40px;
+    font-size: 1.5em;
+    background: none;
+    color: white;
+    font-weight: bold;
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.253);
+}
+
+.title{
+    position: absolute;
+    background-color: #313E48;
+    color: white;
+    width: 250px;
+    padding: 25px 0;
+    text-align: center;
+    font-size: 2em;
+    left: 50%;
+    top: 550px;
+    margin-left: -125px;
+    z-index: 2;
+}
+
+@media screen and (max-width: 1080px) {
+    #alphab{
+        display: none;
+    }
+
+    .haut{
+        top: -80px;
+    }
+
+    .hautRecherche{
+        height: 400px;
+    }
+
+    .container .recherche{
+        height: 50px;
+        top: -200px;
+    }
+
+    .recherche button{
+        height: 43px;
+    }
+
+    .recherche #loupe{
+        width: 30px;
+        border: white solid 2px;
+        padding: 6px 12px;
+    }
+
+    .recherche .trait{
+        height: 1.5px;
+        top: 34.5px;
+    }
+
+    .recherche input{
+        top: -17px;
+        font-size: 0.7em;
+        left: 5px;
+    }
+
+    .title{
+        font-size: 1.5em;
+        width: 180px;
+        padding: 20px 0;
+        top: 360px;
+        margin-left: -90px;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- NOS OBJETS -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+.erreur{
+    background-color: lightgrey;
+    text-align: center;
+    margin-bottom: 70px;
+    padding: 20px;
+}
+
+.multiples{
+    width: 70%;
+    background-color: lightgrey;
+    justify-content: center;
+    vertical-align: middle;
+    margin: auto;
+    padding: 40px;
+    overflow: hidden;
+    margin-bottom: 75px;
+}
+
+.multiples *{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.multiples .cover{
+    left: 0;
+    width: 200px;
+    text-align: center;
+    margin-right: 4%;
+}
+
+.multiples .cover > img{
+    display: inline-block;
+    vertical-align: middle;
+    height: 11em;  
+}
+
+.multiples .textMult{
+    vertical-align: top;
+    width: 50%;
+}
+
+.multiples .textMult *{
+    margin: 0;
+}
+
+.multiples .textMult > *{
+    display: block;
+}
+
+.multiples .textMult > h4{
+    margin-bottom: 20px;
+}
+
+.multiples .detail{
+    position: relative;
+    margin: auto;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.4em;
+    padding: 15px 30px 15px 30px;
+    border-radius: 30px;
+    background-color: #63003C;
+    margin-left: 50px;
+    transition: 0.15s all ease;
+}
+
+.multiples .detail:hover{
+    background-color: #3c0024;
+    transition: 0.15s all ease;
+}
+
+@media screen and (max-width : 1139px){
+    
+    
+    .multiples .detail{
+        display: block;
+        width: 110%;
+        margin: 40px -40px -40px -40px;
+        border-radius: 0;
+        text-align: center;
+    }
+
+    .multiples .textMult{
+        width: 60%;
+        margin: auto;
+        margin-right: -40px;
+    }
+}
+
+@media screen and (max-width : 800px){
+
+    .recherche{
+        height: 30px;
+        float: none;
+        padding-left: 30px;
+        margin: auto;
+        margin-bottom: -100px;
+    }
+
+    .recherche #loupe{
+        display: none;
+    }
+
+    .recherche .trait{
+        top: 15px;
+        margin: auto;
+        width: 100%;
+    }
+
+    .recherche input{
+        top: -63px;
+        left: 0;
+        width: 100%;
+    }
+
+    .erreur{
+        margin-bottom: 20px;
+    }
+
+    .multiples{
+        padding: 20px 20px 40px 20px;
+        width: 50%;
+    }
+
+    .multiples .cover{
+        display: block;
+        margin: auto;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+
+    .multiples .textMult p{
+        display: none;
+    }
+
+    .multiples .textMult{
+        display: block;
+        margin: auto;
+        text-align: center;
+        width: 100%;
+    }
+
+    .multiples .detail{
+        margin-top: 30px;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- LE OBJET -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+
+.principale{
+    width: 100%;
+    margin: 70px 0 0 0;
+}
+
+.principale .cover2, .principale .transparent{
+    width: 100%;
+    height: 550px;
+}
+
+.principale .transparent{
+    position: absolute;
+    background-color: rgba(115, 115, 115, 0.7);
+    z-index: 2;
+}
+
+.principale .cover2{
+    opacity: 1;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 50px;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.principale .hautDePage .cover2 img{
+    width: 100%;
+    margin-top: -40%;
+}
+
+.principale .hautDePage > img{
+    position: absolute;
+    top: 180px;
+    margin-left: 50%;
+    left: -125px;
+    z-index: 3;
+}
+
+.principale > h1, .principale > h2{
+    width: fit-content;
+    margin: auto;
+}
+
+.principale > h2{
+    margin-bottom: 60px;
+}
+
+.principale .detail{
+    width: 50%;
+    margin: auto;
+}
+
+.principale .detail .traitDetail{
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 30px;
+    background-color: rgb(75, 75, 75);
+}
+
+.leTout{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.propriete *{
+    display: inline-block;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.propriete > h4{
+    width: 100px;
+}
+
+.propriete > p{
+    margin-left: 10px;
+}
+
+.long{
+    margin-bottom: -20px;
+}
+
+#desc{
+    top: -32px;
+    margin-left: 114px;
+}
+
+.principale .emprunter{
+    margin: auto;
+    margin-bottom: 60px;
+    width: 50%;
+    overflow: hidden;
+}
+
+.principale .emprunter p,.principale .emprunter button{
+    display: inline-block;
+    padding: 10px;
+}
+
+.principale .emprunter > p{
+    background-color: #63003C;
+    color: rgb(185, 185, 185);
+}
+
+.principale .emprunter > button{
+    cursor: pointer;
+    background-color: #63003C;
+    text-decoration: none;
+    border: none;
+    font-size: 1em;
+    color: white;
+    transition: 0.2s all ease;
+}
+
+.principale .emprunter > button:hover{
+    background-color: #3c0024;
+    transition: 0.2s all ease;
+}
+
+@media screen and (max-width : 900px){
+
+    .principale .cover2, .principale .transparent{
+        height: 400px;
+    }
+
+    .principale .hautDePage .cover2 > img{
+        margin-top: -30%;
+    }
+    
+    .principale .hautDePage > img{
+        left: -100px;
+        top: 140px;
+        width: 200px;
+    }
+
+    .principale .detail, .principale .leTout{
+        width: 70%;
+    }
+
+    .principale .emprunter{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width : 450px){
+
+    .principale .cover2, .principale .transparent{
+        height: 300px;
+    }
+    
+    .principale .hautDePage > img{
+        left: -75px;
+        top: 125px;
+        width: 150px;
+    }
+
+    .principale .detail, .principale .leTout{
+        width: 95%;
+    }
+
+    .principale .leTout{
+        margin-bottom: 20px;
+    }
+
+    .principale .emprunter{
+        width: 100%;
+        text-align: center;
+    }
+
+    .principale .emprunter{
+        width: 100%;
+        margin-bottom: -60px;
+        overflow: hidden;
+    }
+    
+    .principale .emprunter *{
+        margin-bottom: -1px;
+        display: block;
+        padding: 5px;
+    }
+
+    .principale .emprunter a{
+        padding: 20px;
+    }
+
+}
+
+/*---------------------------------- POP UP MODAL ---------------------------------*/
+
+/* Style pour masquer le modal par défaut */
+.modal {
+    display: none; /* masqué par défaut */
+    position: fixed; /* Reste en place */
+    z-index: 6; /* Situé au-dessus de tout le reste */
+    padding-top: 100px; /* espace en haut de la boîte de dialogue */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largeur de la boîte de dialogue */
+    height: 100%; /* hauteur de la boîte de dialogue */
+    overflow: auto; /* Autorise défilement si le contenu dépasse */
+    background-color: rgb(0,0,0); /* Fond de boîte de dialogue */
+    background-color: rgba(0,0,0,0.4); /* Fond de boîte de dialogue avec transparence */
+}
+
+/* Style pour le contenu de la boîte de dialogue */
+.modal-content {
+    text-align: center;
+    background-color: #D6DBDF;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 500px;
+}
+
+/* Style pour le bouton de fermeture */
+.close-button {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Style pour le bouton de fermeture lorsque la souris passe dessus */
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

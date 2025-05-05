@@ -1,0 +1,194 @@
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.hautRecherche{
+    height: 400px;
+    overflow: hidden;
+    background: url(Ressources/biblio.jpg) no-repeat center;
+    background-size: cover;
+}
+
+.hautRecherche .transparent{
+    position: relative;
+    background-color: rgba(53, 54, 99, 0.7);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.double{
+    width: 100%;
+    min-height: 800px;
+    background-color: #EFEFEF;
+}
+
+.grosTitre{
+    padding: 20px 0;
+    width: 100%;
+    background-color: #313E48;
+    text-align: center;
+    color: white;
+}
+
+.double > *{
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.double .emprunts{
+    height: 800px;
+    margin-right: -5px;
+    width: 38%;
+    border-right: solid #313E48 3px;
+}
+
+.double > * .multiples{
+    position: relative;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.double > * .multiples > *{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+}
+
+.double > * .multiples .textMult{
+    top: -20px;
+    margin-left: 30px;
+}
+
+.double > * .multiples .textMult h4{
+    margin-bottom: 20px;
+}
+
+.double > * .multiples .textMult p{
+    font-style: italic;
+    font-weight: bold;
+}
+
+.double .retours{
+    border-left: solid #313E48 3px;
+    height: 800px;
+    width: 38%;
+}
+
+.double .emprunts img, .double .retours img{
+    width: 130px;
+}
+
+.double .coloré{
+    background-color: #D9D9D9;
+}
+
+.historique{
+    position: absolute;
+    background-color: #63003C;
+    min-height: 900px;
+    top: 300px;
+    right: 0;
+    width: 25%;
+    z-index: 5;
+    float: right;
+}
+
+.historique, .historique a{
+    color: white;
+}
+
+.historique * {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.historique > h2{
+    background-color: #3c0024;
+}
+
+.historique p{
+    font-size: 0.7em;
+    font-style: italic;
+    margin-top: 3px;
+}
+
+.historique ul{
+    width: fit-content;
+    margin-left: 40px;
+    margin-top: 40px;
+    list-style: circle;
+}
+
+.historique ul li{
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.historique ul a:hover{
+    text-decoration: underline;
+}
+
+.erreur{
+    background-color: lightgrey;
+    text-align: center;
+    margin-top: 183px;
+    margin-bottom: 130px;
+    padding: 20px;
+}
+
+
+@media screen and (max-width: 1080px) {
+    footer{
+        margin: 0;
+    }
+
+    .double > * .multiples > *{
+        display: block;
+    }
+
+    .double > * .multiples .textMult{
+        top: 10px;
+        margin-left: 0;
+    }
+
+    .double > * .multiples *{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .hautRecherche{
+        height: 250px;
+    }
+
+    .double > *{
+        display: block;
+    }
+
+    .double .emprunts{
+        min-height: 500px;
+        margin-right: -5px;
+        width: 100%;
+        border-right: none;
+    }
+
+    .double .retours{
+        height: 800px;
+        margin-right: -5px;
+        width: 100%;
+        border-left: none;
+    }
+
+    .historique{
+        display: none;
+    }
+
+}
